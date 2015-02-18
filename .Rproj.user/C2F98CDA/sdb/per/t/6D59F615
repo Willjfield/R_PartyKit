@@ -1,0 +1,17 @@
+{
+    "contents" : "library(rpart); library(partykit)\n\nramphs = read.csv('/Users/willjfield/Desktop/Projects/ITP/Spring_2015/ISAW_MapDataViz/Week_3_Class/roman-amphitheaters.csv')\n#Or get the latest ramphs from url\nramphs.rpart = rpart(capacity ~ quarries.nearest + freq.modcountry + elevation, method=\"anova\", data=ramphs, na.action=na.rpart)\n\nplot(ramphs.rpart)\n\ntext(ramphs.rpart, use.n=TRUE, all=TRUE, cex=.6)\n\nprintcp(ramphs.rpart)\n\nplot(as.party(ramphs.rpart), type=\"extended\")\n",
+    "created" : 1424142787756.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "151233680",
+    "id" : "6D59F615",
+    "lastKnownWriteTime" : 1424235760,
+    "path" : "~/Desktop/Projects/ITP/Spring_2015/ISAW_MapDataViz/Week_3_Homework/Partykit/partykit_ramphs.R",
+    "project_path" : "partykit_ramphs.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

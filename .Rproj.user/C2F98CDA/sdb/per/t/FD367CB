@@ -1,0 +1,17 @@
+{
+    "contents" : "# RPart/Partykit Tutorial\n\nds = read.csv(\"http://www.math.smith.edu/r/data/help.csv\")\n\nlibrary(rpart); library(partykit)\n\nds$sub = as.factor(ds$substance)\n\nhomeless.rpart = rpart(homeless ~ female + i1 + sub + sexrisk + mcs + pcs, method=\"class\",data=ds)\n\nplot(homeless.rpart)\n\ntext(homeless.rpart, use.n=TRUE, all=TRUE, cex=.8)\n\nprintcp(homeless.rpart)\n\nplot(as.party(homeless.rpart), type=\"extended\")",
+    "created" : 1424142130781.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3963400676",
+    "id" : "FD367CB",
+    "lastKnownWriteTime" : 1424235686,
+    "path" : "~/Desktop/Projects/ITP/Spring_2015/ISAW_MapDataViz/Week_3_Homework/Partykit/Intro_Tutorial.R",
+    "project_path" : "Intro_Tutorial.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
